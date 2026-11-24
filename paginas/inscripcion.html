@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inscripción | Última Vida</title>
+    <link rel="icon" href="../imagenes/emblema.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script defer src="../js/torneo.js"></script>
+</head>
+<body class="bg-sky-50 text-slate-900">
+    <header class="bg-white border-b-4 border-red-600 py-3">
+        <div class="max-w-6xl mx-auto px-4 flex flex-wrap items-center justify-between gap-4">
+            <a class="flex items-center gap-2 font-black text-xl text-slate-900 no-underline" href="../index.html">
+                <img src="../imagenes/emblema.svg" width="44" height="38" alt="Cruceta blanca sobre el emblema rojo de la copa">
+                <span>ÚLTIMA VIDA</span>
+            </a>
+            <nav class="flex flex-wrap items-center gap-5 font-semibold">
+                <a href="../index.html" class="text-slate-700 hover:text-red-600 pb-1">Inicio</a>
+                <a href="inscripcion.html" aria-current="page" class="text-red-600 border-b-2 border-sky-500 pb-1">Inscripción</a>
+                <a href="equipos.html" class="text-slate-700 hover:text-sky-600 pb-1">Equipos</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-8 w-full">
+        <p class="font-mono text-s font-bold uppercase tracking-wider text-sky-700">Mesa de registro</p>
+        <h1 class="text-4xl font-bold text-slate-900 mt-1 mb-2">
+            Inscripción de <span class="text-red-600">equipos</span>
+        </h1>
+        <p class="text-slate-700 text-lg mb-6">
+            Anota el nombre de tu equipo y el apodo de cada jugador. Los personajes son opcionales.
+        </p>
+
+        <section class="grid grid-cols-1 lg:grid-cols-5 gap-6">
+            <div class="lg:col-span-3 bg-white rounded-xl border p-6">
+                <h2 class="text-xl font-bold text-slate-900 mb-4">Datos de la dupla</h2>
+
+                <form id="formulario">
+                    <label for="nombre" class="text-slate-900">Nombre del equipo</label>
+                    <input id="nombre" name="nombre" type="text" maxlength="36" required placeholder="Ej. Estrellas del KO" class="border bg-white text-slate-900">
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <fieldset class="border border-red-200 bg-red-50/40">
+                            <legend class="text-red-700">Jugador 1 (P1)</legend>
+                            <label for="apodo1" class="text-slate-900">Apodo</label>
+                            <input id="apodo1" name="apodo1" type="text" maxlength="24" required placeholder="Ej. Sol" class="border border-red-300 bg-white text-slate-900">
+
+                            <label for="personaje1" class="text-slate-900">Personaje (opcional)</label>
+                            <input id="personaje1" name="personaje1" type="text" list="luchadores" maxlength="32" placeholder="Ej. Kirby" class="border border-red-300 bg-white text-slate-900">
+                        </fieldset>
+
+                        <fieldset class="border border-sky-200 bg-sky-50/60">
+                            <legend class="text-sky-800">Jugador 2 (P2)</legend>
+                            <label for="apodo2" class="text-slate-900">Apodo</label>
+                            <input id="apodo2" name="apodo2" type="text" maxlength="24" required placeholder="Ej. Luna" class="border border-sky-300 bg-white text-slate-900">
+
+                            <label for="personaje2" class="text-slate-900">Personaje (opcional)</label>
+                            <input id="personaje2" name="personaje2" type="text" list="luchadores" maxlength="32" placeholder="Ej. Mario" class="border border-sky-300 bg-white text-slate-900">
+                        </fieldset>
+                    </div>
+
+                    <datalist id="luchadores">
+                        <option value="Kirby"></option>
+                        <option value="Mario"></option>
+                        <option value="Pikachu"></option>
+                        <option value="Samus"></option>
+                        <option value="Link"></option>
+                        <option value="Yoshi"></option>
+                    </datalist>
+
+                    <p id="cupo" class="text-sm font-semibold text-sky-900 mb-3"></p>
+                    <button id="inscribir" type="submit" class="px-5 py-2.5 rounded-lg bg-red-600 hover:bg-red-700 disabled:opacity-50 text-white font-bold cursor-pointer">
+                        Inscribir equipo
+                    </button>
+                    <p id="aviso" class="mt-3 font-bold"></p>
+                </form>
+            </div>
+
+            <aside class="lg:col-span-2 bg-sky-900 text-sky-50 rounded-xl border-t-4 p-6 self-start">
+                <p class="font-mono text-xs font-bold uppercase tracking-wider text-sky-300">Copa Smash | 5-D</p>
+                <h2 class="text-xl font-bold text-white mt-1">Pase de equipo</h2>
+                <div class="my-5">
+                    <p id="nombre-pase" class="text-2xl font-bold italic text-red-300">Aún no hay pase</p>
+                    <p id="detalle-pase" class="mt-1 text-sky-100">Tu confirmación aparecerá aquí al inscribir a la dupla.</p>
+                </div>
+                <div class="pt-3 border-t border-sky-700">
+                    <a href="equipos.html" class="underline font-bold text-sky-200 hover:text-white">Consultar lista de equipos</a>
+                </div>
+            </aside>
+        </section>
+
+        <p class="text-sm text-slate-600 mt-6">
+            Los equipos se guardan en este navegador para consultarlos y pasar lista en la pestaña de Equipos.
+        </p>
+    </main>
+
+    <footer class="bg-slate-900 text-sky-100 border-t-4 py-4 text-sm">
+        <div class="max-w-6xl mx-auto px-4 flex flex-wrap items-center justify-between gap-3">
+            <p><strong class="text-red-400">ÚLTIMA VIDA</strong> · Super Smash Bros. Ultimate</p>
+            <p>Proyecto de clase · FIME · Grupo 5-D</p>
+        </div>
+    </footer>
+</body>
+</html>

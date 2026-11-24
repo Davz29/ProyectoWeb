@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Copa Smash en dobles | Última Vida</title>
+    <link rel="icon" href="imagenes/emblema.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-sky-50 text-slate-900">
+    <header class="bg-white border-b-4 border-red-600 py-3">
+        <div class="max-w-6xl mx-auto px-4 flex flex-wrap items-center justify-between gap-4">
+            <a class="flex items-center gap-2 font-black text-xl text-slate-900 no-underline" href="index.html">
+                <img src="imagenes/emblema.svg" width="44" height="38" alt="Cruceta blanca sobre el emblema rojo de la copa">
+                <span>ÚLTIMA VIDA</span>
+            </a>
+            <nav class="flex flex-wrap items-center gap-5 font-semibold">
+                <a href="index.html" aria-current="page" class="text-red-600 border-b-2 border-sky-500 pb-1">Inicio</a>
+                <a href="paginas/inscripcion.html" class="text-slate-700 hover:text-sky-600 pb-1">Inscripción</a>
+                <a href="paginas/equipos.html" class="text-slate-700 hover:text-red-600 pb-1">Equipos</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 w-full">
+        <section class="py-10 grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+            <div>
+                <p class="font-mono text-s font-bold uppercase tracking-wider text-sky-700 mb-2">
+                    Super Smash Bros Ultimate
+                </p>
+                <h1 class="gran-titulo text-slate-900 mb-4">
+                    Copa Smash<br><em class="not-italic text-red-600">en dobles.</em>
+                </h1>
+                <p class="text-slate-700 text-lg leading-relaxed mb-6">
+                    El torneo local del grupo 5-D. Arma tu dupla, elige a tus luchadores y registra al equipo antes del primer combate.
+                </p>
+                <div class="flex flex-wrap gap-3">
+                    <a class="px-5 py-2.5 rounded-lg bg-red-600 hover:bg-red-700 text-white font-bold no-underline" href="paginas/inscripcion.html">
+                        Inscribir equipo
+                    </a>
+                    <a class="px-5 py-2.5 rounded-lg bg-sky-200 hover:bg-sky-300 text-sky-950 border border-sky-400 font-bold no-underline" href="paginas/equipos.html">
+                        Ver equipos
+                    </a>
+                </div>
+            </div>
+
+            <figure class="cartel bg-white">
+                <img src="imagenes/ecmach.png" width="500" height="300" alt="Personajes del smash">
+            </figure>
+        </section>
+
+        <section class="grid grid-cols-1 md:grid-cols-3 bg-white rounded-xl border divide-y md:divide-y-0 md:divide-x">
+            <div class="p-4">
+                <p class="text-xs font-bold uppercase text-red-700">Modalidad</p>
+                <p class="text-2xl font-bold text-slate-900 mt-1">2 contra 2</p>
+            </div>
+            <div class="p-4">
+                <p class="text-xs font-bold uppercase text-sky-700">Cupo total</p>
+                <p class="text-2xl font-bold text-slate-900 mt-1">8 equipos</p>
+            </div>
+            <div class="p-4">
+                <p class="text-xs font-bold uppercase text-red-700">Formato</p>
+                <p class="text-2xl font-bold text-slate-900 mt-1">Eliminación directa</p>
+            </div>
+        </section>
+
+        <section class="py-6 pb-12">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4">Reglas de la copa</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <article class="bg-white rounded-xl border p-5">
+                    <h3 class="text-lg font-bold text-red-700">Tres vidas</h3>
+                    <p class="text-slate-700 mt-2">
+                        Cada jugador empieza con tres vidas. Se juega sin objetos y con la barra de Smash Final desactivada.
+                    </p>
+                </article>
+                <article class="bg-white rounded-xl border p-5">
+                    <h3 class="text-lg font-bold text-sky-800">Siete minutos</h3>
+                    <p class="text-slate-700 mt-2">
+                        Al terminar el tiempo, gana el equipo con más vidas. Si empatan, juegan un desempate a una vida por jugador.
+                    </p>
+                </article>
+                <article class="bg-white rounded-xl border p-5">
+                    <h3 class="text-lg font-bold text-red-700">Al mejor de tres</h3>
+                    <p class="text-slate-700 mt-2">
+                        La primera dupla que gana dos partidas avanza de ronda. La otra queda fuera del torneo.
+                    </p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-900 text-sky-100 border-t-4 py-4 text-sm">
+        <div class="max-w-6xl mx-auto px-4 flex flex-wrap items-center justify-between gap-3">
+            <p><strong class="text-red-400">ÚLTIMA VIDA</strong> · Super Smash Bros. Ultimate</p>
+            <p>Proyecto de clase · FIME · Grupo 5-D</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Equipos inscritos | Última Vida</title>
+    <link rel="icon" href="../imagenes/emblema.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script defer src="../js/torneo.js"></script>
+</head>
+<body class="bg-sky-50 text-slate-900">
+    <header class="bg-white border-b-4 border-red-600 py-3">
+        <div class="max-w-6xl mx-auto px-4 flex flex-wrap items-center justify-between gap-4">
+            <a class="flex items-center gap-2 font-black text-xl text-slate-900 no-underline" href="../index.html">
+                <img src="../imagenes/emblema.svg" width="44" height="38" alt="Cruceta blanca sobre el emblema rojo de la copa">
+                <span>ÚLTIMA VIDA</span>
+            </a>
+            <nav class="flex flex-wrap items-center gap-5 font-semibold">
+                <a href="../index.html" class="text-slate-700 hover:text-red-600 pb-1">Inicio</a>
+                <a href="inscripcion.html" class="text-slate-700 hover:text-sky-600 pb-1">Inscripción</a>
+                <a href="equipos.html" aria-current="page" class="text-red-600 border-b-2 border-sky-500 pb-1">Equipos</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-8 w-full">
+        <p class="font-mono text-s font-bold uppercase tracking-wider text-sky-700">Mesa de registro</p>
+        <div class="flex flex-wrap items-center justify-between gap-4 mt-1">
+            <h1 class="text-4xl font-bold text-slate-900">
+                Equipos inscritos
+            </h1>
+            <a class="px-5 py-2.5 rounded-lg bg-red-600 hover:bg-red-700 text-white font-bold no-underline" href="inscripcion.html">
+                Inscribir equipo
+            </a>
+        </div>
+        <p class="text-slate-700 text-lg mt-2">
+            Confirma la llegada de cada dupla o retira un equipo si hace falta liberar cupo.
+        </p>
+
+        <section class="grid grid-cols-1 md:grid-cols-3 bg-white rounded-xl border divide-y md:divide-y-0 md:divide-x my-6">
+            <div class="p-4">
+                <p class="text-xs font-bold uppercase text-sky-700">Inscritos</p>
+                <p class="text-2xl font-bold text-slate-900 mt-1"><span id="total">0</span> / 8</p>
+            </div>
+            <div class="p-4">
+                <p class="text-xs font-bold uppercase text-sky-700">Presentes</p>
+                <p id="presentes" class="text-2xl font-bold text-sky-800 mt-1">0</p>
+            </div>
+            <div class="p-4">
+                <p class="text-xs font-bold uppercase text-red-700">Por llegar</p>
+                <p id="pendientes" class="text-2xl font-bold text-red-700 mt-1">0</p>
+            </div>
+        </section>
+
+        <section class="mt-6">
+            <div class="flex flex-wrap items-center justify-between gap-4 mb-4">
+                <h2 class="text-2xl font-bold text-slate-900">Lista de asistencia</h2>
+                <label class="flex items-center gap-2 font-bold text-slate-800" for="filtro">
+                    <span>Mostrar:</span>
+                    <select id="filtro" class="border rounded-md px-3 py-2 bg-white text-slate-900 font-normal">
+                        <option value="todos">Todos</option>
+                        <option value="pendientes">Por llegar</option>
+                        <option value="presentes">Presentes</option>
+                    </select>
+                </label>
+            </div>
+
+            <p id="aviso" class="mb-4 font-bold"></p>
+            <ul id="lista" class="grid grid-cols-1 md:grid-cols-2 gap-4 list-none p-0 m-0"></ul>
+        </section>
+    </main>
+
+    <footer class="bg-slate-900 text-sky-100 border-t-4 py-4 text-sm">
+        <div class="max-w-6xl mx-auto px-4 flex flex-wrap items-center justify-between gap-3">
+            <p><strong class="text-red-400">ÚLTIMA VIDA</strong> · Super Smash Bros. Ultimate</p>
+            <p>Proyecto de clase · FIME · Grupo 5-D</p>
+        </div>
+    </footer>
+</body>
+</html>
